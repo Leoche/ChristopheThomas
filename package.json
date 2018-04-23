@@ -1,0 +1,36 @@
+{
+  "name": "christophe-thomas",
+  "version": "1.0.0",
+  "description": "Front end website",
+  "author": "Léo DESIGAUX",
+  "license": "MIT",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=dev webpack-dev-server --progress --mode development --config webpack.config.dev.js",
+    "build": "webpack -p --progress --mode production --config webpack.config.build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Leoche/ChristopheThomas.git"
+  },
+  "dependencies": {
+    "lodash": "4.17.5"
+  },
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-loader": "7.1.4",
+    "babel-preset-env": "1.6.1",
+    "clean-webpack-plugin": "0.1.19",
+    "cross-env": "5.1.4",
+    "css-loader": "0.28.11",
+    "file-loader": "1.1.11",
+    "html-webpack-plugin": "3.2.0",
+    "node-sass": "4.8.3",
+    "sass-loader": "7.0.1",
+    "style-loader": "0.21.0",
+    "url-loader": "1.0.1",
+    "webpack": "4.6.0",
+    "webpack-cli": "2.0.15",
+    "webpack-dev-server": "3.1.3",
+    "webpack-merge": "4.1.2"
+  }
+}
