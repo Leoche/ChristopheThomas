@@ -1,0 +1,35 @@
+#logo {
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    padding-left: 140px;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: -15px;
+        left: 0;
+        width: 120px;
+        height: 120px;
+        background: url("/assets/images/logo.png");
+        background-size: 120px 120px;
+    }
+
+    & .sub-title {
+        color: #FCB635;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 20px;
+    }
+
+    & .title {
+        color: #fff;
+        font-weight: 900;
+        font-size: 62px;
+        line-height: 63px;
+    }
+
+    & .description {
+        color: #959595;
+        font-weight: bold;
+    }
+}
