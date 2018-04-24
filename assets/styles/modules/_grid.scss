@@ -8,7 +8,7 @@
 
     & .main {
         grid-area: main;
-        padding: 80px;
+        padding: 80px 160px 80px 80px;
         background: url("/assets/images/background.png");
         background-size: cover;
         display: flex;
@@ -19,6 +19,28 @@
             color: #B3ABAB;
             font-size: 16px;
         }
+
+        & .buttons a {
+            width: 220px;
+            height: 48px;
+            line-height: 48px;
+            text-align: center;
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+            display: inline-block;
+            background: #FCB635;
+            color: #FFF;
+            border-radius: 48px;
+            text-decoration: none;
+
+            &:nth-child(2) {
+                background: transparent;
+                margin-left: 16px;
+                color: #FCB635;
+                box-shadow: inset 0 0 0 2px #FCB635;
+            }
+        }
     }
 
     & .sidebar {
@@ -26,7 +48,7 @@
         background: #EEEBCF;
         position: relative;
         display: flex;
-        justify-content: flex-start;
+        justify-content: flex-end;
         align-items: flex-end;
 
         &:after {
@@ -41,9 +63,23 @@
             left: -10vw;
         }
 
+        &:before {
+            content: "";
+            background: url("/assets/images/background.png");
+            width: 380px;
+            height: 380px;
+            box-shadow: inset 0 0 0 8px #EEEBCF;
+            position: absolute;
+            border-radius: 50%;
+            top: 40px;
+            left: -160px;
+            z-index: 3;
+        }
+
         & .infos {
             font-size: 18px;
-            margin-bottom: 60px;
+            margin-bottom: 80px;
+            margin-right: 80px;
             text-align: right;
 
             & .title {
@@ -59,7 +95,7 @@
         position: relative;
         z-index: 2;
         color: #EEE;
-        padding: 0 40px;
+        padding: 0 80px;
         height: 100%;
         display: flex;
         justify-content: space-between;
