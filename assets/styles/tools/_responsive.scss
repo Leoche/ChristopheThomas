@@ -1,0 +1,10 @@
+$xsmall: 344px !default;
+$small: 500px !default;
+$medium: 768px !default;
+$large: 1090px !default;
+$menu-width: 227px !default;
+
+$xsmall-down: "only screen and (max-width: #{$xsmall})" !default;
+$small-down: "only screen and (max-width: #{$small})" !default;
+$medium-down: "only screen and (max-width: #{$medium})" !default;
+$large-down: "only screen and (max-width: #{$large})" !default;
