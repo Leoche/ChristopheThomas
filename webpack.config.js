@@ -9,7 +9,7 @@ const dirNode = 'node_modules';
 const dirApp = path.join(__dirname, 'app');
 const dirAssets = path.join(__dirname, 'assets');
 
-const appHtmlTitle = 'Webpack Boilerplate';
+const appHtmlTitle = 'Christophe Thomas, tailleur de pierre en Indre et loire';
 
 /**
  * Webpack Configuration
@@ -34,8 +34,21 @@ module.exports = {
         }),
 
         new HtmlWebpackPlugin({
+            template: path.join(__dirname, 'contact.ejs'),
+            title: "Contact - " + appHtmlTitle,
+            filename: 'app/contact.html'
+        }),
+
+        new HtmlWebpackPlugin({
+            template: path.join(__dirname, 'gallerie.ejs'),
+            title: "Gallerie Photo - " + appHtmlTitle,
+            filename: 'app/gallerie.html'
+        }),
+
+        new HtmlWebpackPlugin({
             template: path.join(__dirname, 'index.ejs'),
-            title: appHtmlTitle
+            title: "Accueil - " + appHtmlTitle,
+            filename: 'app/index.html'
         })
     ],
     module: {
