@@ -1,4 +1,4 @@
-.container {
+.container.container-frontpage {
     width: 100%;
     height: 100%;
     display: grid;
@@ -158,7 +158,7 @@
 }
 
 @media #{$large-down} {
-    .container {
+    .container.container-frontpage {
         & .main {
             padding: 80px 120px 80px 40px;
 
@@ -170,14 +170,6 @@
         }
 
         & .sidebar {
-            &:after {
-                border-width: 0;
-                height: 100%;
-                width: 2vw;
-                left: -2vw;
-                background: #EEEBCF;
-            }
-
             &:before {
                 width: 280px;
                 height: 280px;
@@ -191,11 +183,15 @@
                 margin-right: 40px;
             }
         }
+
+        & footer {
+            padding: 0 40px;
+        }
     }
 }
 
 @media #{$medium-down} {
-    .container {
+    .container.container-frontpage {
         height: auto;
         display: flex;
         flex-direction: column;
@@ -255,7 +251,7 @@
 }
 
 @media #{$small-down} {
-    .container {
+    .container.container-frontpage {
         & .main {
             & .buttons {
                 margin: 32px 16px;
