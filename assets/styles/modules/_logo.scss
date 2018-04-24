@@ -46,100 +46,104 @@
 }
 
 @media #{$large-down} {
-    #logo {
-        font-family: "Montserrat", sans-serif;
-        position: relative;
-        padding-left: 140px;
+    .container.container-frontpage {
+        & #logo {
+            font-family: "Montserrat", sans-serif;
+            position: relative;
+            padding-left: 140px;
 
-        &:after {
-            content: "";
-            position: absolute;
-            top: -15px;
-            left: 0;
-            width: 120px;
-            height: 120px;
-            background: url("/assets/images/logo.png");
-            background-size: 120px 120px;
-        }
+            &:after {
+                content: "";
+                position: absolute;
+                top: -15px;
+                left: 0;
+                width: 120px;
+                height: 120px;
+                background: url("/assets/images/logo.png");
+                background-size: 120px 120px;
+            }
 
-        & .sub-title {
-            color: #FCB635;
-            font-weight: bold;
-            font-size: 36px;
-            line-height: 20px;
-        }
+            & .sub-title {
+                color: #FCB635;
+                font-weight: bold;
+                font-size: 36px;
+                line-height: 20px;
+            }
 
-        & .title {
-            color: #fff;
-            font-weight: 900;
-            font-size: 62px;
-            line-height: 62px;
-        }
+            & .title {
+                color: #fff;
+                font-weight: 900;
+                font-size: 62px;
+                line-height: 62px;
+            }
 
-        & .description {
-            line-height: 16px;
-            color: #959595;
-            font-weight: bold;
+            & .description {
+                line-height: 16px;
+                color: #959595;
+                font-weight: bold;
+            }
         }
     }
 }
 
 @media #{$medium-down} {
-    #logo {
-        font-family: "Montserrat", sans-serif;
-        position: relative;
-        height: 180px;
-        display: flex;
-        justify-content: center;
-        padding-left: 0;
-        margin-bottom: 36px;
-        background: rgba(0, 0, 0, 0.5);
-
-        &:after {
-            content: none;
-        }
-
-        &:before {
-            content: "";
-            display: block;
-            margin-right: 32px;
-            margin-top: 25px;
-            width: 120px;
-            height: 120px;
-            background: url("/assets/images/logo.png");
-            background-size: 120px 120px;
-        }
-
-        & .logo-text-container {
+    .container.container-frontpage {
+        & #logo {
+            font-family: "Montserrat", sans-serif;
+            position: relative;
+            height: 180px;
             display: flex;
-            flex-direction: column;
             justify-content: center;
-        }
+            padding-left: 0;
+            margin-bottom: 36px;
+            background: rgba(0, 0, 0, 0.5);
 
-        & .sub-title {
-            display: inline-flex;
-            flex-grow: 0;
-            color: #FCB635;
-            font-weight: bold;
-            font-size: 36px;
-            line-height: 20px;
-        }
+            &:after {
+                content: none;
+            }
 
-        & .title {
-            display: inline-flex;
-            flex-grow: 0;
-            color: #fff;
-            font-weight: 900;
-            font-size: 62px;
-            line-height: 62px;
-        }
+            &:before {
+                content: "";
+                display: block;
+                margin-right: 32px;
+                margin-top: 25px;
+                width: 120px;
+                height: 120px;
+                background: url("/assets/images/logo.png");
+                background-size: 120px 120px;
+            }
 
-        & .description {
-            display: inline-flex;
-            flex-grow: 0;
-            line-height: 16px;
-            color: #959595;
-            font-weight: bold;
+            & .logo-text-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            & .sub-title {
+                display: inline-flex;
+                flex-grow: 0;
+                color: #FCB635;
+                font-weight: bold;
+                font-size: 36px;
+                line-height: 20px;
+            }
+
+            & .title {
+                display: inline-flex;
+                flex-grow: 0;
+                color: #fff;
+                font-weight: 900;
+                font-size: 62px;
+                line-height: 62px;
+            }
+
+            & .description {
+                display: inline-flex;
+                flex-grow: 0;
+                line-height: 16px;
+                color: #959595;
+                font-weight: bold;
+            }
         }
     }
 
@@ -239,6 +243,60 @@
                         height: 2px;
                     }
                 }
+            }
+        }
+    }
+}
+
+.container-contact {
+    & .main {
+        & #logo {
+            position: absolute;
+            bottom: -100px;
+            left: 0;
+            padding-left: 0;
+            width: calc(100vh - 60px);
+            height: 160px;
+            transform-origin: 0 0;
+            transform: rotate(-90deg);
+            display: flex;
+            justify-content: center;
+            padding-left: 0;
+
+            &:after {}
+
+            & .description {
+                display: none;
+            }
+
+            & .sub-title {}
+
+            & .title, & .sub-title {
+                font-size: 40px;
+            }
+
+            &:after {
+                content: none;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: calc(50% - 35px);
+                left: 40px;
+                width: 70px;
+                height: 70px;
+                background: url("/assets/images/logo.png");
+                background-size: 70px 70px;
+                transform-origin: 50% 50%;
+                transform: rotate(90deg);
+            }
+
+            & .logo-text-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
             }
         }
     }

@@ -36,19 +36,18 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'contact.ejs'),
             title: "Contact - " + appHtmlTitle,
-            filename: 'app/contact.html'
+            filename: 'contact.html'
         }),
 
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'gallerie.ejs'),
             title: "Gallerie Photo - " + appHtmlTitle,
-            filename: 'app/gallerie.html'
+            filename: 'gallerie.html'
         }),
 
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'index.ejs'),
-            title: "Accueil - " + appHtmlTitle,
-            filename: 'app/index.html'
+            title: "Accueil - " + appHtmlTitle
         })
     ],
     module: {

@@ -133,28 +133,6 @@
             }
         }
     }
-
-    & footer {
-        grid-area: footer;
-        background: #111;
-        position: relative;
-        z-index: 2;
-        color: #AAA;
-        padding: 0 80px;
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        & a {
-            color: #EFEFEF;
-            text-decoration: none;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
 }
 
 @media #{$large-down} {
