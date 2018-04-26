@@ -16,7 +16,7 @@
         justify-content: space-between;
 
         a {
-            color: #EFEFEF;
+            color: $white;
             text-decoration: none;
 
             &:hover {
@@ -39,39 +39,40 @@
             font-weight: bold;
             font-size: 16px;
             display: inline-block;
-            background: #FCB635;
-            color: #FFF;
+            background: $brand;
+            color: $white;
             border-radius: 48px;
             text-decoration: none;
             transition: all .2s;
 
             &:hover {
-                color: #FFF;
+                color: $white;
                 transform: translateY(-3px);
             }
 
             &:active {
-                background: #af7f27;
-                color: #FFF;
+                background: darken($brand, 20%);
+                color: $white;
                 transform: translateY(-1px);
             }
 
             &:nth-child(2) {
                 background: transparent;
                 margin-left: 16px;
-                color: #FCB635;
-                box-shadow: inset 0 0 0 2px #FCB635;
+                color: $brand;
+                box-shadow: inset 0 0 0 2px $brand;
 
                 &:hover {
-                    background: #FCB635;
-                    color: #FFF;
+                    background: $brand;
+                    color: $white;
+                    background: lighten($brand, 5%);
                     transform: translateY(-3px);
                 }
 
                 &:active {
-                    box-shadow: inset 0 0 0 2px #af7f27;
-                    background: #af7f27;
-                    color: #FFF;
+                    box-shadow: inset 0 0 0 2px darken($brand, 20%);
+                    background: darken($brand, 20%);
+                    color: $white;
                     transform: translateY(-1px);
                 }
             }
@@ -80,7 +81,7 @@
 
     & .sidebar {
         grid-area: sidebar;
-        background: #EEEBCF;
+        background: $sable;
         position: relative;
         display: flex;
         justify-content: flex-end;
@@ -92,7 +93,7 @@
             height: 0;
             border-style: solid;
             border-width: 0 0 calc(100vh - 60px) 10vw;
-            border-color: transparent transparent #EEEBCF transparent;
+            border-color: transparent transparent $sable transparent;
             position: absolute;
             top: 0;
             left: -10vw;
@@ -103,7 +104,7 @@
             background: url("/assets/images/background.png");
             width: 380px;
             height: 380px;
-            box-shadow: inset 0 0 0 8px #EEEBCF;
+            box-shadow: inset 0 0 0 8px $sable;
             position: absolute;
             border-radius: 50%;
             top: 40px;
@@ -194,7 +195,7 @@
                 height: 100%;
                 width: 2vw;
                 left: -2vw;
-                background: #EEEBCF;
+                background: $sable;
             }
 
             &:before {

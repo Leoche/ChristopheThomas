@@ -1,5 +1,5 @@
 #logo {
-    font-family: "Montserrat", sans-serif;
+    font-family: $font-title;
     position: relative;
     padding-left: 190px;
 
@@ -21,14 +21,14 @@
     }
 
     & .sub-title {
-        color: #FCB635;
+        color: $brand;
         font-weight: bold;
         font-size: 42px;
         line-height: 42px;
     }
 
     & .title {
-        color: #fff;
+        color: $white;
         font-weight: 900;
         font-size: 72px;
         line-height: 72px;
@@ -64,14 +64,14 @@
             }
 
             & .sub-title {
-                color: #FCB635;
+                color: $brand;
                 font-weight: bold;
                 font-size: 36px;
                 line-height: 20px;
             }
 
             & .title {
-                color: #fff;
+                color: $white;
                 font-weight: 900;
                 font-size: 62px;
                 line-height: 62px;
@@ -122,7 +122,7 @@
             & .sub-title {
                 display: inline-flex;
                 flex-grow: 0;
-                color: #FCB635;
+                color: $brand;
                 font-weight: bold;
                 font-size: 36px;
                 line-height: 20px;
@@ -131,7 +131,7 @@
             & .title {
                 display: inline-flex;
                 flex-grow: 0;
-                color: #fff;
+                color: $white;
                 font-weight: 900;
                 font-size: 62px;
                 line-height: 62px;
@@ -205,7 +205,7 @@
 
                 & span {
                     display: block;
-                    background: #fff;
+                    background: $white;
                     height: 2px;
                     top: calc(50% - 1px);
                     width: 100%;

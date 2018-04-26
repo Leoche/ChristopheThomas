@@ -8,11 +8,141 @@
 
     & .main {
         grid-area: main;
-        background: #000;
+        background: $black;
     }
 
     & .sidebar {
         grid-area: sidebar;
-        background: #EEEBCF;
+        background: $sable;
+        display: flex;
+        flex-direction: column;
+
+        & header {
+            width: 100%;
+            height: 160px;
+            background: $brand;
+            color: #111;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            & h1 {
+                font-size: 48px;
+                font-family: $font-title;
+                font-weight: bold;
+                margin: 20px 40px;
+            }
+        }
+
+        & section {
+            display: flex;
+            width: 100%;
+            height: 100%;
+
+            & .contact-form, & .contact-infos {
+                width: 50%;
+                height: 100%;
+            }
+
+            & .contact-form {
+                width: 50%;
+                height: 100%;
+                background: $softblack;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0 40px;
+
+                & p {
+                    color: $gray;
+                    font-size: 14px;
+                    line-height: 20px;
+                    margin-bottom: 32px;
+                }
+
+                & label {
+                    color: $white;
+                    font-size: 16px;
+                    display: block;
+                    margin-bottom: 16px;
+                }
+
+                & .input {
+                    border: none;
+                    width: 100%;
+                    padding: 0 12px;
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 18px;
+                    margin-bottom: 24px;
+
+                    &:focus {
+                        outline: none;
+                        box-shadow: 0 0 0 5px #444;
+                    }
+                }
+
+                & textarea.input {
+                    height: 130px;
+                    padding: 12px 8px;
+                    resize: none;
+                    line-height: 22px;
+                }
+
+                & .buttons {
+                    display: flex;
+                    justify-content: space-between;
+
+                    & button {
+                        width: auto;
+                        height: 50px;
+                        line-height: 50px;
+                        background: $brand;
+                        color: $white;
+                        text-align: center;
+                        border: none;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        font-size: 16px;
+                        padding: 0 16px;
+                        cursor: pointer;
+                        transition: all .2s;
+
+                        &:focus {
+                            outline: none;
+                        }
+
+                        &:hover {
+                            color: $white;
+                            background: lighten($brand, 5%);
+                            transform: translateY(-3px);
+                            box-shadow: 0 3px 0 darken($brand, 20%);
+                        }
+
+                        &:active {
+                            background: darken($brand, 20%);
+                            color: $white;
+                            transform: translateY(-1px);
+                            box-shadow: 0 1px 0 darken($brand, 20%);
+                        }
+
+                        &.softblack {
+                            background: #222;
+
+                            &:hover {
+                                color: $white;
+                                background: lighten(#222, 5%);
+                                box-shadow: 0 3px 0 darken(#222, 20%);
+                            }
+
+                            &:active {
+                                background: darken(#222, 20%);
+                                box-shadow: 0 1px 0 darken(#222, 20%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
