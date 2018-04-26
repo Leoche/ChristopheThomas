@@ -9,13 +9,19 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 14px;
+    line-height: 20px;
 
     & a {
         color: $white;
+        display: inline-block;
         text-decoration: none;
+        border-radius: 3px;
+        background: rgba(0, 0, 0, 0.2);
+        padding: 0 5px;
 
         &:hover {
-            text-decoration: underline;
+            background: rgba(0, 0, 0, 0.5);
         }
     }
 }

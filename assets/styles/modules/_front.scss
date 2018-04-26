@@ -15,12 +15,16 @@
         flex-direction: column;
         justify-content: space-between;
 
-        a {
+        & a {
             color: $white;
+            display: inline-block;
             text-decoration: none;
+            border-radius: 3px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 0 5px;
 
             &:hover {
-                text-decoration: underline;
+                background: rgba(0, 0, 0, 0.5);
             }
         }
 
@@ -125,11 +129,15 @@
             }
 
             & a {
-                color: #666;
-                text-decoration: underline;
+                color: $softblack;
+                display: inline-block;
+                text-decoration: none;
+                border-radius: 3px;
+                background: darken($sable, 15%);
+                padding: 0 5px;
 
                 &:hover {
-                    color: #111;
+                    background: darken($sable, 25%);
                 }
             }
         }
