@@ -87,6 +87,110 @@
 }
 
 @media #{$medium-down} {
+    .container {
+        #logo {
+            font-family: "Montserrat", sans-serif;
+            position: relative;
+            height: 60px;
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 0;
+            margin-bottom: 36px;
+            background: rgba(0, 0, 0, 0.5);
+
+            &:after {
+                content: none;
+            }
+
+            &:before {
+                content: "";
+                display: block;
+                width: 40px;
+                height: 40px;
+                margin: 10px 16px;
+                background: url("/assets/images/logo.png");
+                background-size: 40px 40px;
+            }
+
+            & .logo-text-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+
+            & .sub-title, & .title {
+                display: inline-flex;
+                font-size: 24px;
+            }
+
+            & .description {
+                display: none;
+            }
+
+            & .hamburger {
+                color: white;
+                margin-left: auto;
+                align-self: center;
+                display: flex;
+                width: 60px;
+                height: 60px;
+                cursor: pointer;
+                transition: background .2s;
+
+                & .bars {
+                    margin: auto;
+                    width: 24px;
+                    height: 18px;
+                    position: relative;
+
+                    & span {
+                        display: block;
+                        background: $white;
+                        height: 2px;
+                        top: calc(50% - 1px);
+                        width: 100%;
+                        border-radius: 5px;
+                        position: absolute;
+                        transition: transform .2s;
+
+                        &:first-child {
+                            top: 0;
+                        }
+
+                        &:last-child {
+                            top: auto;
+                            bottom: 0;
+                        }
+                    }
+                }
+
+                &:hover {
+                    background: rgba(255, 255, 255, 0.1);
+                }
+
+                &.active, &:hover {
+                    & span {
+                        height: 0px;
+                        transform-origin: 50% 50%;
+
+                        &:first-child {
+                            transform: translateY(8px) rotate(45deg);
+                            height: 2px;
+                        }
+
+                        &:last-child {
+                            transform: translateY(-8px) rotate(-45deg);
+                            height: 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media #{$medium-down} {
     .container.container-frontpage {
         & #logo {
             font-family: "Montserrat", sans-serif;
@@ -117,6 +221,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                align-items: flex-start;
             }
 
             & .sub-title {
@@ -145,105 +250,9 @@
                 color: #959595;
                 font-weight: bold;
             }
-        }
-    }
 
-    #logo.is-small {
-        font-family: "Montserrat", sans-serif;
-        position: relative;
-        height: 60px;
-        display: flex;
-        justify-content: flex-start;
-        padding-left: 0;
-        margin-bottom: 36px;
-        background: rgba(0, 0, 0, 0.5);
-
-        &:after {
-            content: none;
-        }
-
-        &:before {
-            content: "";
-            display: block;
-            width: 40px;
-            height: 40px;
-            margin: 10px 16px;
-            background: url("/assets/images/logo.png");
-            background-size: 40px 40px;
-        }
-
-        & .logo-text-container {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
-
-        & .sub-title, & .title {
-            display: inline-flex;
-            font-size: 24px;
-        }
-
-        & .description {
-            display: none;
-        }
-
-        & .hamburger {
-            color: white;
-            margin-left: auto;
-            align-self: center;
-            display: flex;
-            width: 60px;
-            height: 60px;
-            cursor: pointer;
-            transition: background .2s;
-
-            & .bars {
-                margin: auto;
-                width: 24px;
-                height: 18px;
-                position: relative;
-
-                & span {
-                    display: block;
-                    background: $white;
-                    height: 2px;
-                    top: calc(50% - 1px);
-                    width: 100%;
-                    border-radius: 5px;
-                    position: absolute;
-                    transition: transform .2s;
-
-                    &:first-child {
-                        top: 0;
-                    }
-
-                    &:last-child {
-                        top: auto;
-                        bottom: 0;
-                    }
-                }
-            }
-
-            &:hover {
-                background: rgba(255, 255, 255, 0.1);
-            }
-
-            &.active, &:hover {
-                & span {
-                    height: 0px;
-                    transform-origin: 50% 50%;
-
-                    &:first-child {
-                        transform: translateY(8px) rotate(45deg);
-                        height: 2px;
-                    }
-
-                    &:last-child {
-                        transform: translateY(-8px) rotate(-45deg);
-                        height: 2px;
-                    }
-                }
+            & .hamburger {
+                display: none;
             }
         }
     }
@@ -301,4 +310,125 @@
             }
         }
     }
+}
+
+@media #{$medium-down} {
+    .container-contact {
+        & .main {
+            & #logo {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 60px;
+                transform: none;
+                display: flex;
+                justify-content: flex-start;
+                padding-left: 16px;
+                margin-bottom: 0;
+                background: $black;
+                box-shadow: 0 3px 15px rgba($black, 0.5);
+
+                &:after {
+                    content: none;
+                }
+
+                &:before {
+                    content: none;
+                    display: block;
+                    width: 40px;
+                    height: 40px;
+                    margin: 10px 16px;
+                    background: url("/assets/images/logo.png");
+                    background-size: 40px 40px;
+                }
+
+                & .logo-text-container {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                & .title, & .sub-title {
+                    display: inline-flex;
+                    font-size: 24px;
+                }
+
+                &:after {
+                    content: none;
+                }
+
+                & .logo-text-container {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                & .hamburger {
+                    color: white;
+                    margin-left: auto;
+                    align-self: center;
+                    display: flex;
+                    width: 60px;
+                    height: 60px;
+                    cursor: pointer;
+                    transition: background .2s;
+
+                    & .bars {
+                        margin: auto;
+                        width: 24px;
+                        height: 18px;
+                        position: relative;
+
+                        & span {
+                            display: block;
+                            background: $white;
+                            height: 2px;
+                            top: calc(50% - 1px);
+                            width: 100%;
+                            border-radius: 5px;
+                            position: absolute;
+                            transition: transform .2s;
+
+                            &:first-child {
+                                top: 0;
+                            }
+
+                            &:last-child {
+                                top: auto;
+                                bottom: 0;
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        background: rgba(255, 255, 255, 0.1);
+                    }
+
+                    &.active, &:hover {
+                        & span {
+                            height: 0px;
+                            transform-origin: 50% 50%;
+
+                            &:first-child {
+                                transform: translateY(8px) rotate(45deg);
+                                height: 2px;
+                            }
+
+                            &:last-child {
+                                transform: translateY(-8px) rotate(-45deg);
+                                height: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media-query ($small-down) {
+    .container.container-main {}
 }
