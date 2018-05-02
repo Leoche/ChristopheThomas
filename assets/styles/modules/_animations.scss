@@ -1,0 +1,99 @@
+@media #{$medium-down} {
+    html, body {
+        height: auto;
+    }
+
+    .appear {
+        transform: none !important;
+    }
+}
+
+@media #{$medium-up} {
+    html, body {
+        overflow: hidden;
+    }
+
+    .t-transform {
+        transition-property: transform;
+        transition-duration: .5s;
+        will-change: transform;
+    }
+
+    .t-height {
+        transition-property: height;
+        transition-duration: .5s;
+        will-change: height;
+
+        &.appear {
+            height: 0;
+        }
+    }
+
+    .t-transform-opacity {
+        transition: transform .5s, opacity .5s;
+        will-change: transform, opacity;
+    }
+
+    .t-transform-opacity.appear {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+    .t-opacity {
+        transition-property: opacity;
+        transition-duration: .5s;
+        will-change: opacity;
+
+        &.appear {
+            opacity: 0;
+        }
+    }
+
+    .t-delay-1 {
+        transition-delay: .25s;
+
+        &.appear {
+            transition-delay: 1.5s;
+        }
+    }
+
+    .t-delay-2 {
+        transition-delay: .5s;
+
+        &.appear {
+            transition-delay: 1.25s;
+        }
+    }
+
+    .t-delay-3 {
+        transition-delay: .75s;
+
+        &.appear {
+            transition-delay: 1s;
+        }
+    }
+
+    .t-delay-4 {
+        transition-delay: 1s;
+
+        &.appear {
+            transition-delay: .75s;
+        }
+    }
+
+    .t-delay-5 {
+        transition-delay: 1.25s;
+
+        &.appear {
+            transition-delay: .5s;
+        }
+    }
+
+    .t-delay-6 {
+        transition-delay: 1.5s;
+
+        &.appear {
+            transition-delay: .25s;
+        }
+    }
+}

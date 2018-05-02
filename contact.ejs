@@ -6,9 +6,9 @@
   <title><%= htmlWebpackPlugin.options.title %></title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,900|Open+Sans" rel="stylesheet">
 </head>
-<body>
+<body class="appear">
   <div class="container container-contact">
-    <section class="main">
+    <section class="main appear t-transform">
       <div id="logo">
         <div class="logo-text-container">
           <span class="sub-title">Christophe</span>
@@ -25,11 +25,11 @@
       </div>
     </section>
     <section class="sidebar">
-      <header><h1>Me contacter</h1></header>
+      <header class="appear t-transform t-delay-1"><h1 class="t-transform-opacity">Me contacter</h1></header>
       <section>
-        <div class="contact-form">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisi perspiciatis fugit optio voluptate eius praesentium dolorum. Cupiditate distinctio velit consectetur corporis odit voluptatibus dolores?</p>
-          <form action="#">
+        <div class="contact-form appear t-transform t-delay-2">
+          <p class="appear t-transform-opacity t-delay-4">Lorem ipsum dolor sit amet, consectetur adipisi perspiciatis fugit optio voluptate eius praesentium dolorum. Cupiditate distinctio velit consectetur corporis odit voluptatibus dolores?</p>
+          <form action="#" class="appear t-transform-opacity t-delay-4">
             <label for="name">Nom et prénom</label>
             <input class="input" type="text" />
             <label for="name">Email</label>
@@ -42,8 +42,8 @@
             </div>
           </form>
         </div>
-        <div class="contact-infos">
-          <div class="addresses">
+        <div class="contact-infos appear t-opacity t-delay-3">
+          <div class="addresses appear t-transform-opacity t-delay-5">
             <h4>Coordonnées</h4>
             <address>
               Christophe THOMAS<br/>
@@ -56,16 +56,16 @@
               Port. 06.70.84.65.32<br/>
             </address>
           </div>
-          <div class="google-maps">
+          <div class="google-maps  appear t-transform-opacity t-delay-6">
             <iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=indre+et+loire&key=AIzaSyCtA1FxnXw-46_VaHC-SDejqd5v-b6dJSI" allowfullscreen></iframe>
           </div>
         </div>
       </section>
     </section>
-    <footer>
-      <span>Footer <a href="#">Leo</a></span>
-      <span>Footer</span>
-    </footer>
   </div>
+  <footer class='appear t-height t-delay-5'>
+    <span>Footer <a href="#">Leo</a></span>
+    <span>Footer</span>
+  </footer>
 </body>
 </html>

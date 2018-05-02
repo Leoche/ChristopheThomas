@@ -7,4 +7,5 @@ $menu-width: 227px !default;
 $xsmall-down: "only screen and (max-width: #{$xsmall})" !default;
 $small-down: "only screen and (max-width: #{$small})" !default;
 $medium-down: "only screen and (max-width: #{$medium})" !default;
+$medium-up: "only screen and (min-width: #{$medium + 1})" !default;
 $large-down: "only screen and (max-width: #{$large})" !default;
