@@ -82,6 +82,7 @@
                 & .input {
                     border: none;
                     width: 100%;
+                    border-radius: 5px;
                     padding: 0 12px;
                     height: 40px;
                     line-height: 40px;
@@ -109,6 +110,7 @@
                     & button {
                         width: auto;
                         height: 50px;
+                        border-radius: 5px;
                         line-height: 50px;
                         background: $brand;
                         color: $white;
@@ -228,10 +230,12 @@
 
         & .main {
             background: $black;
+            width: 100%;
         }
 
         & .sidebar {
             background: $sable;
+            width: 100%;
             display: flex;
             flex-direction: column;
 
