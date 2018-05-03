@@ -48,6 +48,73 @@
             height: 100%;
             overflow-x: hidden;
             overflow-y: scroll;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 2% 1%;
+
+            & .gallerie-thumbnail {
+                width: 33.3333%;
+                height: 230px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                & figure {
+                    width: 90%;
+                    height: 190px;
+                    background: $white;
+                    color: $softblack;
+                    overflow: hidden;
+                    position: relative;
+
+                    & .img-container {
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;
+                        transition: all .2s;
+
+                        & img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: 50% 50%;
+                            transition: transform .3s;
+                        }
+                    }
+
+                    & span {
+                        width: 100%;
+                        line-height: 40px;
+                        top: 100%;
+                        left: 8px;
+                        transition: top .2s;
+                        position: absolute;
+                    }
+                }
+
+                &:hover {
+                    & .img-container {
+                        width: 100%;
+                        height: 80%;
+
+                        img {
+                            transform: scale(1.1);
+                        }
+                    }
+
+                    & span {
+                        top: calc(100% - 40px);
+                    }
+                }
+
+                &:active {
+                    & .img-container {
+                        img {
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -57,7 +124,7 @@
 // ===================================================================================
 
 @media #{$medium-down} {
-    .container.container-contact {
+    .container.container-gallerie {
         padding-top: 60px;
         height: auto;
         display: flex;
