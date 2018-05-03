@@ -62,7 +62,7 @@
                 & figure {
                     width: 90%;
                     height: 190px;
-                    background: $white;
+                    border-radius: 5px;
                     color: $softblack;
                     overflow: hidden;
                     position: relative;
@@ -70,40 +70,82 @@
                     & .img-container {
                         width: 100%;
                         height: 100%;
-                        overflow: hidden;
+                        background: $black;
                         transition: all .2s;
 
                         & img {
                             width: 100%;
                             height: 100%;
+                            opacity: .7;
                             object-fit: cover;
                             object-position: 50% 50%;
-                            transition: transform .3s;
+                            transition: transform .3s, opacity .3s;
                         }
                     }
 
-                    & span {
-                        width: 100%;
-                        line-height: 40px;
-                        top: 100%;
-                        left: 8px;
+                    & .infos {
+                        top: calc(100% - 50px);
                         transition: top .2s;
                         position: absolute;
+                        width: calc(100% - 48px);
+
+                        & span {
+                            position: absolute;
+                            top: 0;
+                            width: 100%;
+                            line-height: 40px;
+                            height: 40px;
+                            margin: 0 24px;
+                            color: $white;
+                            font-family: $font-title;
+                            font-weight: bold;
+                            overflow: hidden;
+
+                            &:after {
+                                content: '';
+                                display: block;
+                                position: absolute;
+                                left: 0;
+                                bottom: 4px;
+                                width: 0%;
+                                transition: width .5s;
+                                height: 2px;
+                                background: $white;
+                            }
+                        }
+
+                        & time {
+                            position: absolute;
+                            top: 45px;
+                            color: rgba($white, 0.7);
+                            font-size: 14px;
+                            margin: 0 24px;
+                            transition: transform .5s .1s, opacity .5s .1s;
+                            transform: translateY(10px);
+                            opacity: 0;
+                        }
                     }
                 }
 
                 &:hover {
                     & .img-container {
-                        width: 100%;
-                        height: 80%;
-
                         img {
-                            transform: scale(1.1);
+                            transform: scale(1.05);
+                            opacity: .3;
                         }
                     }
 
-                    & span {
-                        top: calc(100% - 40px);
+                    & .infos {
+                        top: calc(100% - 80px);
+
+                        & span:after {
+                            width: 40%;
+                        }
+
+                        & time {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
                     }
                 }
 
@@ -113,6 +155,22 @@
                             transform: scale(1.05);
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+// ===================================================================================
+//    MEDIUM DOWN
+// ===================================================================================
+
+@media #{$large-down} {
+    .container.container-gallerie {
+        & .sidebar {
+            section.gallerie-container {
+                & .gallerie-thumbnail {
+                    width: 50%;
                 }
             }
         }
@@ -145,7 +203,7 @@
                 width: 100%;
                 height: 92px;
                 line-height: 92px;
-                background: $brand;
+                background: $white;
                 color: #111;
                 display: flex;
                 flex-direction: column;
@@ -166,6 +224,19 @@
                 width: 100%;
                 height: auto;
                 flex-direction: column;
+            }
+
+            & section.gallerie-container {
+                padding: 8px 0;
+
+                & .gallerie-thumbnail {
+                    width: 102%;
+                    height: 220px;
+
+                    & figure {
+                        width: 95%;
+                    }
+                }
             }
         }
     }

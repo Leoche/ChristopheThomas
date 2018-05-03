@@ -2,6 +2,7 @@
     font-family: $font-title;
     position: relative;
     padding-left: 190px;
+    z-index: 99999;
 
     &:after {
         content: '';
@@ -48,7 +49,7 @@
 @media #{$large-down} {
     .container.container-frontpage {
         & #logo {
-            font-family: "Montserrat", sans-serif;
+            font-family: $font-title;
             position: relative;
             padding-left: 140px;
 
@@ -89,7 +90,7 @@
 @media #{$medium-down} {
     .container {
         #logo {
-            font-family: "Montserrat", sans-serif;
+            font-family: $font-title;
             position: relative;
             height: 60px;
             display: flex;
