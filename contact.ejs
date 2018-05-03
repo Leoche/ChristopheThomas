@@ -6,8 +6,12 @@
   <title><%= htmlWebpackPlugin.options.title %></title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,900|Open+Sans" rel="stylesheet">
 </head>
-<body class="appear">
+<body class="no-animated">
   <div class="container container-contact">
+    <section class="loader show">
+      <div class="loader-logo"></div>
+      <span>Chargement</span>
+    </section>
     <section class="main appear t-transform">
       <div id="logo">
         <div class="logo-text-container">
@@ -24,7 +28,7 @@
         </div>
       </div>
     </section>
-    <section class="sidebar">
+    <section class="sidebar appear t-transform-opacity t-delay-1">
       <header class="appear t-transform t-delay-1"><h1 class="t-transform-opacity">Me contacter</h1></header>
       <section>
         <div class="contact-form appear t-transform t-delay-2">
@@ -63,7 +67,7 @@
       </section>
     </section>
   </div>
-  <footer class='appear t-height t-delay-5'>
+  <footer class='appear t-height t-delay-1'>
     <span>Footer <a href="#">Leo</a></span>
     <span>Footer</span>
   </footer>

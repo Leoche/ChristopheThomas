@@ -6,8 +6,12 @@
   <title><%= htmlWebpackPlugin.options.title %></title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,900|Open+Sans" rel="stylesheet">
 </head>
-<body>
+<body class="no-animated">
   <div class="container container-frontpage">
+    <section class="loader show">
+      <div class="loader-logo"></div>
+      <span>Chargement</span>
+    </section>
     <section class="main">
       <div id="logo" class="is-large appear t-transform-opacity t-delay-1">
         <div class="logo-text-container">

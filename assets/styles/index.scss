@@ -12,9 +12,10 @@ $font-title: "Montserrat", sans-serif;
 @import "./tools/responsive";
 
 // MODULES
-@import "./modules/front";
-@import "./modules/footer";
-@import "./modules/contact";
-@import "./modules/gallerie";
-@import "./modules/logo";
 @import "./modules/animations";
+@import "./modules/contact";
+@import "./modules/footer";
+@import "./modules/front";
+@import "./modules/gallerie";
+@import "./modules/loader";
+@import "./modules/logo";

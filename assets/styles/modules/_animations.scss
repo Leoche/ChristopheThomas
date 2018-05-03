@@ -13,6 +13,21 @@
         overflow: hidden;
     }
 
+    body.no-animated {
+        & .appear, & .disappear {
+            transition-duration: 0s;
+            transition-delay: 0s;
+        }
+    }
+
+    .appear {
+        transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    }
+
+    .disappear {
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
     .t-transform {
         transition-property: transform;
         transition-duration: .5s;
@@ -30,7 +45,7 @@
     }
 
     .t-transform-opacity {
-        transition: transform .5s, opacity .5s;
+        transition: transform .5s, opacity .2s;
         will-change: transform, opacity;
     }
 
@@ -49,51 +64,15 @@
         }
     }
 
-    .t-delay-1 {
-        transition-delay: .25s;
+    $numberOfDelay: 10;
 
-        &.appear {
-            transition-delay: 1.5s;
-        }
-    }
+    @for $i from 1 through $numberOfDelay {
+        .t-delay-#{$i} {
+            transition-delay: 0.25s * $i;
 
-    .t-delay-2 {
-        transition-delay: .5s;
-
-        &.appear {
-            transition-delay: 1.25s;
-        }
-    }
-
-    .t-delay-3 {
-        transition-delay: .75s;
-
-        &.appear {
-            transition-delay: 1s;
-        }
-    }
-
-    .t-delay-4 {
-        transition-delay: 1s;
-
-        &.appear {
-            transition-delay: .75s;
-        }
-    }
-
-    .t-delay-5 {
-        transition-delay: 1.25s;
-
-        &.appear {
-            transition-delay: .5s;
-        }
-    }
-
-    .t-delay-6 {
-        transition-delay: 1.5s;
-
-        &.appear {
-            transition-delay: .25s;
+            &.appear {
+                transition-delay: 0.25s * 5 - 0.25s * $i;
+            }
         }
     }
 }
