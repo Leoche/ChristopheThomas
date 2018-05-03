@@ -258,7 +258,7 @@
     }
 }
 
-.container-contact {
+.container-contact, .container-gallerie {
     & .main {
         & #logo {
             position: absolute;
@@ -313,7 +313,7 @@
 }
 
 @media #{$medium-down} {
-    .container-contact {
+    .container-contact, .container-gallerie {
         & .main {
             & #logo {
                 position: fixed;
@@ -427,8 +427,4 @@
             }
         }
     }
-}
-
-@media-query ($small-down) {
-    .container.container-main {}
 }

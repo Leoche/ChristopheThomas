@@ -6,9 +6,13 @@
   <title><%= htmlWebpackPlugin.options.title %></title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,900|Open+Sans" rel="stylesheet">
 </head>
-<body>
-  <div class="container">
-    <section class="main">
+<body class="no-animated">
+  <div class="container container-gallerie">
+    <section class="loader show">
+      <div class="loader-logo"></div>
+      <span>Chargement</span>
+    </section>
+    <section class="main appear t-transform">
       <div id="logo">
         <div class="logo-text-container">
           <span class="sub-title">Christophe</span>
@@ -23,27 +27,19 @@
           </div>
         </div>
       </div>
-      <p class="story">
-        L'entreprise  située à <a href="#">Tours</a>,  est spécialisée est spécialisée dans la restauration de bâtiments anciens, la taille de pierre, la maçonnerie traditionnelle et la création et restauration de cheminées à foyer ouvert.<br/><br/>
-        Les connaissances et tournemains acquis depuis trente ans dans la restauration et la rénovation de bâtiments anciens à travers la France me permettent de vous proposer toute la gamme des techniques de construction traditionnelles pour votre patrimoine en Touraine : taille de pierre, enduits chaux, terre-cuite, terre crue, chanvre... Dans mon atelier tourangeau, je taille et restaure les pierres dures ou tendres pour réaliser des cheminées, fontaines, tables, cadrans solaires... en grès, granit, calcaire ou marbre.
-      </p>
-      <div class="buttons">
-        <a href="#">ME CONTACTER</a>
-        <a href="#">GALLERIE PHOTO</a>
-      </div>
     </section>
-    <section class="sidebar">
-      <div class="infos"><span class="title">Coordonnées</span><br/>
-        5-7 rue du Maréchal<br/>
-        Lyautey 37000<br/>
-        <a href="#">TOURS</a><br/>
-        <br/>
-        Tél. 09.72.86.34.26<br/>
-        Port. 06.88.87.29.15<br/>
-      </div>
+    <section class="sidebar appear t-transform-opacity t-delay-1">
+      <header class="appear t-transform t-delay-2"><h1 class="appear t-transform-opacity t-delay-1">Me contacter</h1></header>
+      <section class="gallerie-container">
+        Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>
+        Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>
+        Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>
+        Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>
+        Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>Test<br>
+      </section>
     </section>
   </div>
-  <footer>
+  <footer class='appear t-height t-delay-1'>
     <span>Footer <a href="#">Leo</a></span>
     <span>Footer</span>
   </footer>
