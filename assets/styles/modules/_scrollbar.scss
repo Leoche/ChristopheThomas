@@ -1,0 +1,21 @@
+.custom-scrollbar {
+    /* width */
+    &::-webkit-scrollbar {
+        width: 16px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: $sable;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: $brand;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: darken($brand, 20%);
+    }
+}
