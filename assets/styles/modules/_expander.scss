@@ -1,0 +1,12 @@
+.expander {
+    position: absolute;
+    background: $brand;
+    opacity: 0;
+    border-radius: 5px;
+    transition: none;
+    z-index: 0;
+
+    &.animated {
+        transition: all .5s;
+    }
+}
