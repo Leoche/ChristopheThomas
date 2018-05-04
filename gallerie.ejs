@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width">
   <title><%= htmlWebpackPlugin.options.title %></title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,900|Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 </head>
 <body class="no-animated">
   <div class="container container-gallerie">
@@ -29,130 +30,149 @@
       </div>
     </section>
     <section class="sidebar appear t-transform-opacity t-delay-1">
-      <header class="appear t-transform t-delay-2"><h1 class="appear t-transform-opacity t-delay-1">Gallerie Photo</h1></header>
-      <section class="gallerie-container custom-scrollbar">
-        <a class="gallerie-thumbnail" href="#">
+      <header class="appear t-transform t-delay-2">
+        <h1 class="appear t-transform-opacity t-delay-3">Gallerie Photo</h1>
+        <button class="appear t-opacity t-delay-3"><i class="ion-arrow-left-c"></i> Retour</button>
+      </header>
+      <section class="gallerie-container view-active custom-scrollbar">
+        <div class="gallerie-view">
           <figure>
-            <div class="img-container">
-              <img src="/assets/images/example.png" alt="example">
-            </div>
-            <div class="infos">
-              <span>Test de texte long Test de texte long Test de texte long Test de texte long</span>
-              <time datetime="2008-02-14 20:00">Il y a 20h</time>
-            </div>
+            <img src="/assets/images/example.png" alt="example">
           </figure>
-        </a>
-        <a class="gallerie-thumbnail" href="#">
-          <figure>
-            <div class="img-container">
-              <img src="/assets/images/example.png" alt="example">
-            </div>
-            <div class="infos">
-              <span>Test de texte long Test de texte long Test de texte long Test de texte long</span>
-              <time datetime="2008-02-14 20:00">Il y a 20h</time>
-            </div>
-          </figure>
-        </a>
-        <a class="gallerie-thumbnail" href="#">
-          <figure>
-            <div class="img-container">
-              <img src="/assets/images/example.png" alt="example">
-            </div>
-            <div class="infos">
-              <span>Test de texte long Test de texte long Test de texte long Test de texte long</span>
-              <time datetime="2008-02-14 20:00">Il y a 20h</time>
-            </div>
-          </figure>
-        </a>
-        <a class="gallerie-thumbnail" href="#">
-          <figure>
-            <div class="img-container">
-              <img src="/assets/images/example.png" alt="example">
-            </div>
-            <div class="infos">
-              <span>Test de texte long Test de texte long Test de texte long Test de texte long</span>
-              <time datetime="2008-02-14 20:00">Il y a 20h</time>
-            </div>
-          </figure>
-        </a>
-        <a class="gallerie-thumbnail" href="#">
-          <figure>
-            <div class="img-container">
-              <img src="/assets/images/example.png" alt="example">
-            </div>
-            <div class="infos">
-              <span>Test de texte long Test de texte long Test de texte long Test de texte long</span>
-              <time datetime="2008-02-14 20:00">Il y a 20h</time>
-            </div>
-          </figure>
-        </a>
-        <a class="gallerie-thumbnail" href="#">
-          <figure>
-            <div class="img-container">
-              <img src="/assets/images/example.png" alt="example">
-            </div>
-            <div class="infos">
-              <span>Test de texte long Test de texte long Test de texte long Test de texte long</span>
-              <time datetime="2008-02-14 20:00">Il y a 20h</time>
-            </div>
-          </figure>
-        </a>
-        <a class="gallerie-thumbnail" href="#">
-          <figure>
-            <div class="img-container">
-              <img src="/assets/images/example.png" alt="example">
-            </div>
-            <div class="infos">
-              <span>Test de texte long Test de texte long Test de texte long Test de texte long</span>
-              <time datetime="2008-02-14 20:00">Il y a 20h</time>
-            </div>
-          </figure>
-        </a>
-        <a class="gallerie-thumbnail" href="#">
-          <figure>
-            <div class="img-container">
-              <img src="/assets/images/example.png" alt="example">
-            </div>
-            <div class="infos">
-              <span>Test de texte long Test de texte long Test de texte long Test de texte long</span>
-              <time datetime="2008-02-14 20:00">Il y a 20h</time>
-            </div>
-          </figure>
-        </a>
-        <a class="gallerie-thumbnail" href="#">
-          <figure>
-            <div class="img-container">
-              <img src="/assets/images/example.png" alt="example">
-            </div>
-            <div class="infos">
-              <span>Test de texte long Test de texte long Test de texte long Test de texte long</span>
-              <time datetime="2008-02-14 20:00">Il y a 20h</time>
-            </div>
-          </figure>
-        </a>
-        <a class="gallerie-thumbnail" href="#">
-          <figure>
-            <div class="img-container">
-              <img src="/assets/images/example.png" alt="example">
-            </div>
-            <div class="infos">
-              <span>Test de texte long Test de texte long Test de texte long Test de texte long</span>
-              <time datetime="2008-02-14 20:00">Il y a 20h</time>
-            </div>
-          </figure>
-        </a>
-        <a class="gallerie-thumbnail" href="#">
-          <figure>
-            <div class="img-container">
-              <img src="/assets/images/example.png" alt="example">
-            </div>
-            <div class="infos">
-              <span>Test de texte long Test de texte long Test de texte long Test de texte long</span>
-              <time datetime="2008-02-14 20:00">Il y a 20h</time>
-            </div>
-          </figure>
-        </a>
-
+          <div class="informations">
+            <article>
+              <h2><span>Description</span></h2>
+              <p>I'm a beginner user of adobe and it's really challenging, then I found this app and I love it. I know how to do a clipping mask on photoshop my request is a little different I was wondering how could I upload an image or vector of my own</p>
+            </article>
+            <time>
+              <h2><span>Date</span></h2>
+              <p>Juillet - Aout 2017</p>
+            </time>
+          </div>
+        </div>
+        <div class="gallerie-thumbnails">
+          <a class="gallerie-thumbnail" href="#">
+            <figure>
+              <div class="img-container">
+                <img src="/assets/images/example.png" alt="example">
+              </div>
+              <div class="infos">
+                <span>Test de texte long Test de texte long Test de texte long Test de texte long</span>
+                <time datetime="2008-02-14 20:00">Il y a 20h</time>
+              </div>
+            </figure>
+          </a>
+          <a class="gallerie-thumbnail" href="#">
+            <figure>
+              <div class="img-container">
+                <img src="/assets/images/example.png" alt="example">
+              </div>
+              <div class="infos">
+                <span>Test de texte long Test de texte long Test de texte long Test de texte long</span>
+                <time datetime="2008-02-14 20:00">Il y a 20h</time>
+              </div>
+            </figure>
+          </a>
+          <a class="gallerie-thumbnail" href="#">
+            <figure>
+              <div class="img-container">
+                <img src="/assets/images/example.png" alt="example">
+              </div>
+              <div class="infos">
+                <span>Test de texte long Test de texte long Test de texte long Test de texte long</span>
+                <time datetime="2008-02-14 20:00">Il y a 20h</time>
+              </div>
+            </figure>
+          </a>
+          <a class="gallerie-thumbnail" href="#">
+            <figure>
+              <div class="img-container">
+                <img src="/assets/images/example.png" alt="example">
+              </div>
+              <div class="infos">
+                <span>Test de texte long Test de texte long Test de texte long Test de texte long</span>
+                <time datetime="2008-02-14 20:00">Il y a 20h</time>
+              </div>
+            </figure>
+          </a>
+          <a class="gallerie-thumbnail" href="#">
+            <figure>
+              <div class="img-container">
+                <img src="/assets/images/example.png" alt="example">
+              </div>
+              <div class="infos">
+                <span>Test de texte long Test de texte long Test de texte long Test de texte long</span>
+                <time datetime="2008-02-14 20:00">Il y a 20h</time>
+              </div>
+            </figure>
+          </a>
+          <a class="gallerie-thumbnail" href="#">
+            <figure>
+              <div class="img-container">
+                <img src="/assets/images/example.png" alt="example">
+              </div>
+              <div class="infos">
+                <span>Test de texte long Test de texte long Test de texte long Test de texte long</span>
+                <time datetime="2008-02-14 20:00">Il y a 20h</time>
+              </div>
+            </figure>
+          </a>
+          <a class="gallerie-thumbnail" href="#">
+            <figure>
+              <div class="img-container">
+                <img src="/assets/images/example.png" alt="example">
+              </div>
+              <div class="infos">
+                <span>Test de texte long Test de texte long Test de texte long Test de texte long</span>
+                <time datetime="2008-02-14 20:00">Il y a 20h</time>
+              </div>
+            </figure>
+          </a>
+          <a class="gallerie-thumbnail" href="#">
+            <figure>
+              <div class="img-container">
+                <img src="/assets/images/example.png" alt="example">
+              </div>
+              <div class="infos">
+                <span>Test de texte long Test de texte long Test de texte long Test de texte long</span>
+                <time datetime="2008-02-14 20:00">Il y a 20h</time>
+              </div>
+            </figure>
+          </a>
+          <a class="gallerie-thumbnail" href="#">
+            <figure>
+              <div class="img-container">
+                <img src="/assets/images/example.png" alt="example">
+              </div>
+              <div class="infos">
+                <span>Test de texte long Test de texte long Test de texte long Test de texte long</span>
+                <time datetime="2008-02-14 20:00">Il y a 20h</time>
+              </div>
+            </figure>
+          </a>
+          <a class="gallerie-thumbnail" href="#">
+            <figure>
+              <div class="img-container">
+                <img src="/assets/images/example.png" alt="example">
+              </div>
+              <div class="infos">
+                <span>Test de texte long Test de texte long Test de texte long Test de texte long</span>
+                <time datetime="2008-02-14 20:00">Il y a 20h</time>
+              </div>
+            </figure>
+          </a>
+          <a class="gallerie-thumbnail" href="#">
+            <figure>
+              <div class="img-container">
+                <img src="/assets/images/example.png" alt="example">
+              </div>
+              <div class="infos">
+                <span>Test de texte long Test de texte long Test de texte long Test de texte long</span>
+                <time datetime="2008-02-14 20:00">Il y a 20h</time>
+              </div>
+            </figure>
+          </a>
+        </div>
       </section>
     </section>
   </div>
