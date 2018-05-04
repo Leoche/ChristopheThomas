@@ -287,7 +287,7 @@
 
 @media #{$medium-down} {
     .container.container-gallerie {
-        padding-top: 60px;
+        margin-top: 60px;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -321,6 +321,11 @@
                     color: $black;
                     padding: 0 16px;
                 }
+
+                & button {
+                    left: auto;
+                    right: 0;
+                }
             }
 
             & section {
@@ -333,12 +338,41 @@
             & section.gallerie-container {
                 padding: 8px 0;
 
+                &.view-active {
+                    padding: 0;
+                    overflow: auto;
+                }
+
                 & .gallerie-thumbnail {
                     width: 102%;
                     height: 220px;
 
                     & figure {
                         width: 95%;
+                    }
+                }
+
+                & .gallerie-view {
+                    flex-direction: column;
+
+                    & figure {
+                        & img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+
+                    .informations {
+                        width: 100%;
+
+                        & p {
+                            font-size: 16px;
+                            line-height: 24px;
+                        }
+
+                        & article:first-child {
+                            margin-bottom: 32px;
+                        }
                     }
                 }
             }
