@@ -1,7 +1,9 @@
 class Expander {
-  constructor(elem, elemTo){
+  constructor(elem, elemTo, cbAfter, cbBefore){
     this.elem = elem;
     this.elemTo = elemTo;
+    this.cbBefore = cbBefore;
+    this.cbAfter = cbAfter;
 
     this.expendItem = document.createElement('div')
     this.expendItem.classList.add('expander')
@@ -13,27 +15,28 @@ class Expander {
   create(){
     this.disableAnimation();
     this.expendItem.style.width = (this.elem.getBoundingClientRect().width) + 'px'
-    this.expendItem.style.height = (this.elem.getBoundingClientRect().height) + 'px'
-    this.expendItem.style.top = (this.elem.getBoundingClientRect().top) + 'px'
+    this.expendItem.style.height = (Math.min(window.innerHeight, Math.max(this.elem.getBoundingClientRect().height, this.elem.getBoundingClientRect().height))) + 'px'
+    this.expendItem.style.top = (this.elem.getBoundingClientRect().top - this.container.getBoundingClientRect().top) + 'px'
     this.expendItem.style.left = (this.elem.getBoundingClientRect().left - this.container.getBoundingClientRect().left) + 'px'
-    this.expendItem.style.borderRadius = this.elem.style.borderRadius || 0
+    this.expendItem.style.borderRadius = this.elem.style.borderRadius
     console.log('this.elem.style', this.elem.style)
 
     this.enableAnimation();
     this.expendItem.style.opacity = 1
 
     setTimeout(() => {
+      if( this.cbBefore != null) this.cbBefore()
       this.expendItem.style.width = (this.elemTo.getBoundingClientRect().width) + 'px'
-      this.expendItem.style.height = (this.elemTo.getBoundingClientRect().height) + 'px'
-      this.expendItem.style.top = (this.elemTo.getBoundingClientRect().top) + 'px'
+      this.expendItem.style.height = (Math.min(window.innerHeight, Math.max(this.elemTo.getBoundingClientRect().height, this.elemTo.getBoundingClientRect().height))) + 'px'
+      this.expendItem.style.top = (this.elemTo.getBoundingClientRect().top - this.container.getBoundingClientRect().top) + 'px'
       this.expendItem.style.left = (this.elemTo.getBoundingClientRect().left - this.container.getBoundingClientRect().left) + 'px'
-      this.expendItem.style.borderRadius = this.elemTo.style.borderRadius || 0
+      this.expendItem.style.borderRadius = this.elemTo.style.borderRadius
       this.animate()
     },500)
   }
   animate(){
     setTimeout(() => {
-      console.log('Show')
+      if( this.cbAfter != null) this.cbAfter()
 
       setTimeout(() => { // XHR HERE
         this.expendItem.style.opacity = 0;

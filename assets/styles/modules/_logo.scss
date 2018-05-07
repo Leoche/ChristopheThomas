@@ -42,8 +42,74 @@
     }
 
     & .hamburger {
-        display: none;
+        color: white;
+        align-self: center;
+        display: flex;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background .2s;
+        margin-left: 24px;
+
+        & .bars {
+            margin: auto;
+            width: 24px;
+            height: 18px;
+            position: relative;
+            transform-origin: 50% 50%;
+            transform: rotate(-90deg);
+
+            & span {
+                display: block;
+                background: $white;
+                height: 2px;
+                top: calc(50% - 1px);
+                width: 100%;
+                transform-origin: 100% 1px;
+                border-radius: 5px;
+                position: absolute;
+                transition: all .2s;
+
+                &:first-child, &:last-child {
+                    width: 50%;
+                    right: 0;
+                    transform: rotate(45deg);
+                }
+
+                &:last-child {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        &.active {
+            & span {
+                height: 0px;
+                transform: translateX(10px);
+
+                &:first-child {
+                    width: 97%;
+                    transform: translateX(-2px) rotate(-45deg);
+                    height: 2px;
+                }
+
+                &:last-child {
+                    width: 97%;
+                    transform: translateX(-3px) rotate(45deg);
+                    height: 2px;
+                }
+            }
+        }
     }
+}
+
+.menu {
+    display: none;
 }
 
 @media #{$large-down} {
@@ -170,7 +236,7 @@
                     background: rgba(255, 255, 255, 0.1);
                 }
 
-                &.active, &:hover {
+                &.active {
                     & span {
                         height: 0px;
                         transform-origin: 50% 50%;
@@ -294,7 +360,7 @@
                 content: "";
                 position: absolute;
                 top: calc(50% - 35px);
-                left: 40px;
+                left: 0;
                 width: 70px;
                 height: 70px;
                 background: url("/assets/images/logo.png");
@@ -375,12 +441,14 @@
                     width: 60px;
                     height: 60px;
                     cursor: pointer;
+                    border-radius: 0;
                     transition: background .2s;
 
                     & .bars {
                         margin: auto;
                         width: 24px;
                         height: 18px;
+                        transform: none;
                         position: relative;
 
                         & span {
@@ -389,9 +457,11 @@
                             height: 2px;
                             top: calc(50% - 1px);
                             width: 100%;
+                            transform-origin: 100% 50%;
+                            transform: none;
                             border-radius: 5px;
                             position: absolute;
-                            transition: transform .2s;
+                            transition: all .2s;
 
                             &:first-child {
                                 top: 0;
@@ -400,6 +470,8 @@
                             &:last-child {
                                 top: auto;
                                 bottom: 0;
+                                right: 0;
+                                width: 75%;
                             }
                         }
                     }
@@ -408,20 +480,71 @@
                         background: rgba(255, 255, 255, 0.1);
                     }
 
-                    &.active, &:hover {
+                    &.active {
                         & span {
                             height: 0px;
-                            transform-origin: 50% 50%;
+                            transform: translateX(10px);
 
                             &:first-child {
-                                transform: translateY(8px) rotate(45deg);
+                                width: 97%;
+                                transform: translateX(-2px) rotate(-45deg);
                                 height: 2px;
                             }
 
                             &:last-child {
-                                transform: translateY(-8px) rotate(-45deg);
+                                width: 97%;
+                                transform: translateX(-3px) rotate(45deg);
                                 height: 2px;
                             }
+                        }
+                    }
+                }
+            }
+
+            .menu {
+                &.active {
+                    display: block;
+
+                    & ul {
+                        transform: none;
+                    }
+                }
+
+                position: fixed;
+                width: 100%;
+                height: calc(100% - 60px);
+                background: rgba(0, 0, 0, 0.7);
+                display: none;
+                top: 60px;
+                left: 0;
+                z-index: 10999;
+                transition: top .5s;
+
+                & ul {
+                    width: 100%;
+                    background: $softblack;
+                    padding: 2px 0;
+                    transform: translateY(-100%);
+                    transition: all .2s;
+                    box-shadow: 0 3px 15px rgba($black, 0.5);
+
+                    & li a {
+                        height: 48px;
+                        font-family: $font-title;
+                        display: flex;
+                        text-decoration: none;
+                        font-size: 18px;
+                        font-weight: bold;
+                        align-items: center;
+                        padding: 0 16px;
+                        color: rgba($white, 0.8);
+                        border-top: 1px solid lighten($softblack, 5%);
+                        transition: all .2s;
+
+                        &:hover {
+                            color: $white;
+                            background: lighten($softblack, 5%);
+                            padding: 0 24px;
                         }
                     }
                 }

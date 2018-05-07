@@ -13,6 +13,7 @@
     "url": "https://github.com/Leoche/ChristopheThomas.git"
   },
   "dependencies": {
+    "jssor-slider": "^27.1.0",
     "lodash": "4.17.5"
   },
   "devDependencies": {
