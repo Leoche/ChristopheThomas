@@ -7,7 +7,11 @@ $white: #FEFEFE;
 $gray: #8E8787;
 $font-title: "Montserrat", sans-serif;
 
+// CAROUSEL
+@import "../../node_modules/swiper/dist/css/swiper.min.css";
+
 // TOOLS
+@import "./tools/glide";
 @import "./tools/reset";
 @import "./tools/responsive";
 

@@ -1,0 +1,56 @@
+.swiper-container {
+    height: 100%;
+    background: $white;
+}
+
+.swiper-cbutton {
+    width: 40px;
+    height: 40px;
+    background: $black;
+    color: $white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+        background: lighten($softblack, 10%);
+    }
+
+    &:active {
+        background: $black;
+    }
+}
+
+.swiper-controls {
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 2;
+}
+
+.swiper-pagination {
+    position: relative;
+    height: 16px;
+
+    & .swiper-pagination-bullet {
+        width: 32px;
+        height: 16px;
+        background: $black;
+        margin: 0 8px;
+        border-radius: 0;
+        opacity: 1;
+        transition: all .5s;
+        box-shadow: inset 0 0 0 $brand;
+
+        &.swiper-pagination-bullet-active {
+            height: 24px;
+            box-shadow: inset 0 -24px 0 $brand;
+        }
+    }
+}

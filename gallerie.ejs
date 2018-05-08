@@ -6,6 +6,7 @@
   <title><%= htmlWebpackPlugin.options.title %></title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,900|Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
 </head>
 <body class="no-animated">
   <div class="container container-gallerie">
@@ -43,8 +44,30 @@
       </header>
       <section class="gallerie-container">
         <div class="gallerie-view">
-          <figure>
+<!--           <figure>
             <img src="/assets/images/example.png" alt="example">
+          </figure> -->
+          <figure>
+            <div class="swiper-container">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="/assets/images/example.png" alt="example">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/example.png" alt="example">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/example.png" alt="example">
+                </div>
+              </div>
+              <div class="swiper-controls">
+                <button class="swiper-cbutton swiper-cbutton-prev"><i class="ion-arrow-left-c"></i></button>
+                <div class="swiper-pagination"></div>
+                <button class="swiper-cbutton swiper-cbutton-next"><i class="ion-arrow-right-c"></i></button>
+              </div>
+            </div>
           </figure>
           <div class="informations appear t-transform t-delay-2">
             <article>

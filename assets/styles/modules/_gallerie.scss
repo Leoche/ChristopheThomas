@@ -38,7 +38,7 @@
                 color: $white;
                 bottom: 0;
                 border: none;
-                left: calc(100% - 400px);
+                right: 0;
                 height: 35px;
                 line-height: 35px;
                 padding: 0 16px;
@@ -112,6 +112,7 @@
                 z-index: 1;
 
                 figure {
+                    width: calc(100% - 350px);
                     height: 100%;
                     flex-grow: 3;
 
@@ -395,6 +396,8 @@
                     flex-direction: column;
 
                     & figure {
+                        width: 100%;
+
                         & img {
                             width: 100%;
                             height: auto;

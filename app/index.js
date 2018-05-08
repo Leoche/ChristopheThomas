@@ -4,8 +4,8 @@
 
 // Load application styles
 import 'styles/index.scss';
+import Swiper from 'swiper'
 import Loader from './Loader.class';
-import J from 'jssor-slider';
 import Expander from './Expander.class';
 
 // ================================
@@ -25,7 +25,22 @@ window.onload = () => {
   let sidebar = document.querySelector('.sidebar')
   let thumbnails = document.querySelectorAll('.gallerie-thumbnail')
   let thumbnailsBack = document.querySelector('.gallerie-back')
+  let sliderElement = document.querySelector('.swiper-container')
   let selectedThumbnail = null;
+  let slider = null;
+
+  if (sliderElement) slider = new Swiper('.swiper-container', {
+    navigation: {
+      nextEl: '.swiper-cbutton-next',
+      prevEl: '.swiper-cbutton-prev',
+    },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      },
+  });
+
   loader.enableLoader().then(() => {
     loader.toggleAppears();
   })
@@ -42,7 +57,7 @@ window.onload = () => {
       selectedThumbnail = item.children[0];
       new Expander(item.children[0], document.querySelector('.gallerie-container'), () => {
         sidebar.classList.add('view-active')
-        console.log('test')
+        if (sliderElement) slider.update()
       }, null)
     })
   })
